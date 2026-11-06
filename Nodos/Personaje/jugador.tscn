@@ -18,4 +18,4 @@ shape = SubResource("CapsuleShape3D_jwamv")
 [node name="Head" type="Node3D" parent="." unique_id=1362974678]
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1248667822]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05312547, 0.64969707, -0.1251874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0003182888, 0.7756659, -0.43190318)
