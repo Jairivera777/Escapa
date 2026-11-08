@@ -16,9 +16,11 @@ var speed : float
 @onready var camera = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D
 @onready var anim_player = $AnimationPlayer 
 @onready var rayCast = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D/RayCast3D
-
+var tiempo : float = 0
+var puerta : Node3D =null
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	rayCast.add_exception(self)
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -57,13 +59,27 @@ func _physics_process(delta : float):
 	apply_floor_snap()
 	move_and_slide()
 	animate()
-	abrirCerrarPuerta()
-func abrirCerrarPuerta():
+	abrirCerrarPuerta(delta)
+func abrirCerrarPuerta(delta : float):
+	rayCast.force_raycast_update()
+	var objeto = null
 	if rayCast.is_colliding():
-		var objeto = rayCast.get_collider()
-		if objeto.has_method("abrirLento"):
-			if Input.is_action_just_pressed("Interactuar"):
-				objeto.abrirLento()
+		objeto = rayCast.get_collider()
+	var puertaValida = objeto and objeto.is_in_group("puertas") and objeto.has_method("interactuar")
+	if Input.is_action_just_pressed("Interactuar") and  puertaValida:
+		puerta = objeto
+		tiempo = 0
+	if Input.is_action_pressed("Interactuar") and puerta != null:
+		tiempo += delta
+		if tiempo >= 0.25:
+			puerta.interactuar(true)
+			puerta = null
+	if Input.is_action_just_released("Interactuar"):
+		if puerta != null:
+			if tiempo < 0.25:
+				puerta.interactuar(false)
+			puerta = null
+			tiempo = 0.0
 func animate():
 	var velocidad_horizontal = Vector2(velocity.x, velocity.z).length()
 	var nueva_animacion = "Idle"

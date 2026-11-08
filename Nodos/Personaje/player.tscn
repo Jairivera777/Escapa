@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cr2ersq7g6q6f"]
 
 [ext_resource type="Script" uid="uid://dks0fctrchlqf" path="res://scripts/Player.gd" id="1_hn6di"]
+[ext_resource type="Script" uid="uid://btnsmtuum1e5o" path="res://scripts/reticula.gd" id="2_mv1uk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5or4"]
 resource_name = "Mat_Joints"
@@ -3725,3 +3726,21 @@ shape = SubResource("CapsuleShape3D_k6p7c")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1054230443]
 root_node = NodePath("../Mesh")
 libraries/ = SubResource("AnimationLibrary_ns7eh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1164828304]
+
+[node name="Reticula" type="Control" parent="CanvasLayer" unique_id=623438682]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_mv1uk")

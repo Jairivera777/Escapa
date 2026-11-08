@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="2_g8s6d"]
 [ext_resource type="PackedScene" uid="uid://bvhqwb4r2l742" path="res://Nodos/Piso/Puerta.tscn" id="3_g8s6d"]
 [ext_resource type="PackedScene" uid="uid://cnqh4mkfds4fx" path="res://Escenas/pausa.tscn" id="4_bsl8t"]
+[ext_resource type="PackedScene" uid="uid://bgxu0i53h6yf6" path="res://Nodos/Objetos/llave.tscn" id="5_wdhlr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rg50c"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -38,3 +39,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26369905, 1.0361215, -1.010
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1824385908]
 
 [node name="Pausa" parent="CanvasLayer" unique_id=1425336794 instance=ExtResource("4_bsl8t")]
+
+[node name="llave" parent="." unique_id=1136991738 instance=ExtResource("5_wdhlr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8724527, 0.23796073, -5.0027885)

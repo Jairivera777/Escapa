@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bgxu0i53h6yf6"]
+
+[ext_resource type="PackedScene" uid="uid://ch8v7prq06xij" path="res://Assets/Models/Objects/llave.blend" id="1_hhla1"]
+
+[node name="llave" type="Node3D" unique_id=1136991738]
+
+[node name="llave" parent="." unique_id=1201561223 instance=ExtResource("1_hhla1")]
+transform = Transform3D(0.058972962, 0, 0, 0, 0.058972962, 0, 0, 0, 0.058972962, 0, 0, 0)
