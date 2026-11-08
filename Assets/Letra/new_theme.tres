@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://xeq10deip0ht"]
+
+[ext_resource type="FontFile" uid="uid://dva0f8842qncn" path="res://Assets/Letra/ArialCE.ttf" id="1_fuwkc"]
+
+[resource]
+default_font = ExtResource("1_fuwkc")

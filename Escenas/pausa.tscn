@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://cnqh4mkfds4fx"]
+
+[ext_resource type="Theme" uid="uid://xeq10deip0ht" path="res://Assets/Letra/new_theme.tres" id="1_iki10"]
+[ext_resource type="Script" uid="uid://bv4twoppnqwkq" path="res://scripts/pausa.gd" id="1_olc6s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwamv"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qph7b"]
+bg_color = Color(0.12156863, 0.12156863, 0.11764706, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8gyis"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8kwx"]
+bg_color = Color(0.09239706, 0.09239707, 0.092397, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pe23x"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wbx11"]
+bg_color = Color(0.06879826, 0.06879829, 0.06879823, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w41a4"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6a5r"]
+bg_color = Color(0.07284262, 0.072842635, 0.072842576, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[node name="Pausa" type="Control" unique_id=1425336794]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -6.0
+offset_right = -2.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_iki10")
+script = ExtResource("1_olc6s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=35949120]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 42.0
+offset_bottom = 49.0
+scale = Vector2(28.686848, 16.046183)
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1370195362]
+layout_mode = 0
+offset_left = 404.00003
+offset_top = 62.0
+offset_right = 518.0
+offset_bottom = 102.0
+scale = Vector2(2.9046476, 3.2244434)
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1809999977]
+layout_mode = 2
+text = "Juego pausado"
+
+[node name="Panel" type="Panel" parent="." unique_id=313990179]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.810555, 16.227558)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2020790783]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 192.00002
+offset_right = 500.0
+offset_bottom = 361.0
+scale = Vector2(3.0294352, 2.521425)
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="VBoxContainer2" unique_id=1531384962]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jwamv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qph7b")
+text = "Continuar"
+
+[node name="Button2" type="Button" parent="VBoxContainer2" unique_id=620516611]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_8gyis")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w8kwx")
+text = "Menu principal
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer2" unique_id=1328809030]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_pe23x")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wbx11")
+text = "Configuracion"
+
+[node name="Button4" type="Button" parent="VBoxContainer2" unique_id=1433802954]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_w41a4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_f6a5r")
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer2/Button" to="." method="continuar"]
+[connection signal="pressed" from="VBoxContainer2/Button4" to="." method="salir"]
