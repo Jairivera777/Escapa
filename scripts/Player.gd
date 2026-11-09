@@ -44,8 +44,6 @@ func _unhandled_input(event):
 		rotacionVertical = clamp(rotacionVertical, min_pitch, max_pitch)
 		camera.rotation.x = rotacionVertical
 		camera.rotation.z = 0
-	if event.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _physics_process(delta : float):
 	var input_dir : Vector3 = Vector3.ZERO

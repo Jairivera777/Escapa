@@ -304,7 +304,6 @@ _data = {
 script = ExtResource("1_um0nn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=456810294]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.367935, 0, -0.37619382)
 material_override = SubResource("StandardMaterial3D_7e8l2")
 mesh = SubResource("BoxMesh_jo26l")
 
@@ -314,7 +313,7 @@ material_override = SubResource("StandardMaterial3D_vtybb")
 mesh = SubResource("CapsuleMesh_jo26l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1597709454]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.368, -0.019, -0.376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003326416, -0.019134521, 0)
 shape = SubResource("BoxShape3D_jo26l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1745026467]
