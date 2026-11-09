@@ -12,6 +12,9 @@ var speed : float
 @export var min_pitch : float = deg_to_rad(-80.0) 
 @export var max_pitch : float = deg_to_rad(80.0)  
 
+@export_category("Inventario")
+@export var tamano : int = 9
+var inventario : Array = []
 @onready var player_mesh : Node3D = $Mesh
 @onready var camera = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D
 @onready var anim_player = $AnimationPlayer 
@@ -21,7 +24,14 @@ var puerta : Node3D =null
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	rayCast.add_exception(self)
-
+	inventario.resize(tamano)
+	inventario.fill(null)
+func agregarInventario(nombreItem : String) -> bool:
+	for i in range (inventario.size()):
+		if inventario.size() == null:
+			inventario[i] = nombreItem
+			return true
+	return false
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * sensibilidad)
