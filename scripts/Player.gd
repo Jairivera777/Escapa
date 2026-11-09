@@ -9,8 +9,9 @@ var speed : float
 @export var jump_strength : float = 6
 @export var gravity : float = 20
 @export var sensibilidad : float = 0.002 
-@export var min_pitch : float = deg_to_rad(-80.0) 
-@export var max_pitch : float = deg_to_rad(80.0)  
+@export var min_pitch : float = deg_to_rad(-89.0) 
+@export var max_pitch : float = deg_to_rad(89.0)
+var rotacionVertical : float = 0  
 
 @export_category("Inventario")
 @export var tamano : int = 9
@@ -39,8 +40,9 @@ func agregarInventario(nombreItem : String, imagen : Texture2D) -> bool:
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * sensibilidad)
-		camera.rotate_x(event.relative.y * sensibilidad)
-		camera.rotation.x = clamp(camera.rotation.x, min_pitch, max_pitch)
+		rotacionVertical -= event.relative.y * sensibilidad
+		rotacionVertical = clamp(rotacionVertical, min_pitch, max_pitch)
+		camera.rotation.x = rotacionVertical
 		camera.rotation.z = 0
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
