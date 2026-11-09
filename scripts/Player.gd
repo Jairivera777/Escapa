@@ -14,22 +14,26 @@ var speed : float
 
 @export_category("Inventario")
 @export var tamano : int = 9
-var inventario : Array = []
+var inventario : Array = [null, null, null, null, null, null, null, null, null]
+
 @onready var player_mesh : Node3D = $Mesh
 @onready var camera = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D
 @onready var anim_player = $AnimationPlayer 
 @onready var rayCast = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D/RayCast3D
 var tiempo : float = 0
-var puerta : Node3D =null
+var puerta : Node3D = null
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	rayCast.add_exception(self)
 	inventario.resize(tamano)
 	inventario.fill(null)
-func agregarInventario(nombreItem : String) -> bool:
+func agregarInventario(nombreItem : String, imagen : Texture2D) -> bool:
 	for i in range (inventario.size()):
-		if inventario.size() == null:
-			inventario[i] = nombreItem
+		if inventario[i] == null:
+			inventario[i] = {
+				"nombre" = nombreItem,
+				"imagen" = imagen
+			}
 			return true
 	return false
 func _unhandled_input(event):
@@ -69,27 +73,32 @@ func _physics_process(delta : float):
 	apply_floor_snap()
 	move_and_slide()
 	animate()
-	abrirCerrarPuerta(delta)
-func abrirCerrarPuerta(delta : float):
+	interactuarObjeto(delta)
+func interactuarObjeto(delta : float):
 	rayCast.force_raycast_update()
 	var objeto = null
 	if rayCast.is_colliding():
 		objeto = rayCast.get_collider()
-	var puertaValida = objeto and objeto.is_in_group("puertas") and objeto.has_method("interactuar")
-	if Input.is_action_just_pressed("Interactuar") and  puertaValida:
-		puerta = objeto
-		tiempo = 0
-	if Input.is_action_pressed("Interactuar") and puerta != null:
-		tiempo += delta
-		if tiempo >= 0.25:
-			puerta.interactuar(true)
-			puerta = null
-	if Input.is_action_just_released("Interactuar"):
-		if puerta != null:
-			if tiempo < 0.25:
-				puerta.interactuar(false)
-			puerta = null
-			tiempo = 0.0
+		if objeto != null:
+			var puertaValida = objeto and objeto.is_in_group("puertas") and objeto.has_method("interactuar")
+			if Input.is_action_just_pressed("Interactuar") and objeto.is_in_group("Items") and objeto.has_method("interactuar"):
+				var seGuardo = objeto.interactuar(self)
+				if !seGuardo:
+					$CanvasLayer/hotBar.mostrarMensajeLleno()
+			if Input.is_action_just_pressed("Interactuar") and  puertaValida:
+				puerta = objeto
+				tiempo = 0
+			if Input.is_action_pressed("Interactuar") and puerta != null:
+				tiempo += delta
+				if tiempo >= 0.25:
+					puerta.interactuar(true)
+					puerta = null
+			if Input.is_action_just_released("Interactuar"):
+				if puerta != null:
+					if tiempo < 0.25:
+						puerta.interactuar(false)
+					puerta = null
+					tiempo = 0.0
 func animate():
 	var velocidad_horizontal = Vector2(velocity.x, velocity.z).length()
 	var nueva_animacion = "Idle"

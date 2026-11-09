@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://bgxu0i53h6yf6"]
 
+[ext_resource type="Script" uid="uid://cc5vjuk4q4d5k" path="res://scripts/llave.gd" id="1_bujg2"]
 [ext_resource type="PackedScene" uid="uid://ch8v7prq06xij" path="res://Assets/Models/Objects/llave.blend" id="1_hhla1"]
 
-[node name="llave" type="Node3D" unique_id=1136991738]
+[sub_resource type="BoxShape3D" id="BoxShape3D_jo26l"]
+size = Vector3(0.27172852, 0.04114628, 0.106609344)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=910824119 groups=["Items"]]
+script = ExtResource("1_bujg2")
 
 [node name="llave" parent="." unique_id=1201561223 instance=ExtResource("1_hhla1")]
 transform = Transform3D(0.058972962, 0, 0, 0, 0.058972962, 0, 0, 0, 0.058972962, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2119595343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.037963867, 0.000890255, 0.00045967102)
+shape = SubResource("BoxShape3D_jo26l")

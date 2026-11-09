@@ -3238,6 +3238,7 @@ content_margin_left = 1.0
 content_margin_top = 1.0
 content_margin_right = 1.0
 content_margin_bottom = 1.0
+bg_color = Color(0, 0, 0, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -3731,7 +3732,7 @@ transform = Transform3D(-99.61946, 8.715579, 1.9907951e-05, 8.715573, 99.61947, 
 
 [node name="RayCast3D" type="RayCast3D" parent="Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D" unique_id=253244324]
 transform = Transform3D(1, 3.0267984e-09, 0, -1.1990778e-08, 1, 0, 1.8626451e-09, -7.450581e-09, 1, 0, 0, 0)
-target_position = Vector3(0, 0, -1.5)
+target_position = Vector3(0, 0, -2)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=742211246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.908729, 0)
@@ -3771,30 +3772,38 @@ grow_vertical = 0
 theme = SubResource("Theme_jo26l")
 script = ExtResource("3_w0lj1")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/hotBar" unique_id=564052774]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/hotBar" unique_id=1362343987]
 layout_mode = 0
-offset_left = 262.0
-offset_top = -21.0
-offset_right = 902.0
-offset_bottom = 61.0
+offset_left = 249.0
+offset_top = -47.0
+offset_right = 867.0
+offset_bottom = 62.0
+
+[node name="NombreItem" type="Label" parent="CanvasLayer/hotBar/VBoxContainer" unique_id=171580214]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/hotBar/VBoxContainer" unique_id=564052774]
+layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/hotBar/MarginContainer" unique_id=1837054634]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer" unique_id=1837054634]
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="slot 1" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=1712258814]
+[node name="slot 1" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1712258814]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 1" unique_id=53330287]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 1" unique_id=53330287]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 1/imagen" unique_id=679817944]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 1/imagen" unique_id=679817944]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3802,15 +3811,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "1"
 
-[node name="slot 2" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=769630941]
+[node name="slot 2" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=769630941]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 2" unique_id=1106892288]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 2" unique_id=1106892288]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 2/imagen" unique_id=730732402]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 2/imagen" unique_id=730732402]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3818,15 +3828,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "2"
 
-[node name="slot 3" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=1317728087]
+[node name="slot 3" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1317728087]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 3" unique_id=1236906104]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 3" unique_id=1236906104]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 3/imagen" unique_id=315791703]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 3/imagen" unique_id=315791703]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3834,15 +3845,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "3"
 
-[node name="slot 4" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=409842649]
+[node name="slot 4" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=409842649]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 4" unique_id=2071653692]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 4" unique_id=2071653692]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 4/imagen" unique_id=1176799505]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 4/imagen" unique_id=1176799505]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3850,15 +3862,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "4"
 
-[node name="slot 5" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=1441323778]
+[node name="slot 5" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1441323778]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 5" unique_id=1423528669]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 5" unique_id=1423528669]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 5/imagen" unique_id=2014758655]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 5/imagen" unique_id=2014758655]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3866,15 +3879,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "5"
 
-[node name="slot 6" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=1228395728]
+[node name="slot 6" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1228395728]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 6" unique_id=1714457279]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 6" unique_id=1714457279]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 6/imagen" unique_id=1691798777]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 6/imagen" unique_id=1691798777]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3882,15 +3896,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "6"
 
-[node name="slot 7" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=1825477515]
+[node name="slot 7" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1825477515]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 7" unique_id=1304322065]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 7" unique_id=1304322065]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 7/imagen" unique_id=478393454]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 7/imagen" unique_id=478393454]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3898,15 +3913,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "7"
 
-[node name="slot 8" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=552885691]
+[node name="slot 8" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=552885691]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 8" unique_id=1536069481]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 8" unique_id=1536069481]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 8/imagen" unique_id=376149]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 8/imagen" unique_id=376149]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
@@ -3914,15 +3930,16 @@ offset_right = 44.0
 offset_bottom = 22.0
 text = "8"
 
-[node name="slot 9" type="PanelContainer" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer" unique_id=1300779061]
+[node name="slot 9" type="PanelContainer" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1300779061]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jo26l")
 
-[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 9" unique_id=310009152]
+[node name="imagen" type="TextureRect" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 9" unique_id=310009152]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+expand_mode = 1
 
-[node name="Label" type="Label" parent="CanvasLayer/hotBar/MarginContainer/HBoxContainer/slot 9/imagen" unique_id=1847832639]
+[node name="Label" type="Label" parent="CanvasLayer/hotBar/VBoxContainer/MarginContainer/HBoxContainer/slot 9/imagen" unique_id=1847832639]
 layout_mode = 0
 offset_left = 4.0
 offset_top = -1.0
