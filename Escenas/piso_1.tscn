@@ -37,3 +37,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -1.4244
 
 [node name="Pared 5" parent="." unique_id=2304383 instance=ExtResource("7_hr374")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -0.37973055)
+
+[node name="Puerta 3" parent="." unique_id=1108031796 instance=ExtResource("2_h4n7x")]
+transform = Transform3D(0.999994, 0, -0.0034594794, 0, 1, 0, 0.0034594794, 0, 0.999994, 2.0902755, 0.9044955, 1.2346411)
+script = null
+
+[node name="Puerta 4" parent="." unique_id=915985498 instance=ExtResource("2_h4n7x")]
+transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 3.4232798)
+script = null
+
+[node name="Pared 6" parent="." unique_id=698672220 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 5.0860395)
+
+[node name="Pared 7" parent="." unique_id=137844448 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 6.160053)
+
+[node name="Pared 8" parent="." unique_id=1271879121 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 7.2260613)
+
+[node name="Pared 9" parent="." unique_id=846492611 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 8.28906)
+
+[node name="Pared 10" parent="." unique_id=1937799553 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 9.336425)
+
+[node name="Pared 11" parent="." unique_id=239141303 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 10.391606)
