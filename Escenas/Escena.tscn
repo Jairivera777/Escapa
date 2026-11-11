@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://3w76sehb57ej" path="res://Nodos/Piso/piso.tscn" id="1_viq8f"]
 [ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="2_g8s6d"]
-[ext_resource type="PackedScene" uid="uid://bvhqwb4r2l742" path="res://Nodos/Piso/Puerta.tscn" id="3_g8s6d"]
+[ext_resource type="PackedScene" uid="uid://bvhqwb4r2l742" path="res://Nodos/Piso/Puerta1.tscn" id="3_g8s6d"]
 [ext_resource type="PackedScene" uid="uid://cnqh4mkfds4fx" path="res://Escenas/pausa.tscn" id="4_bsl8t"]
 [ext_resource type="PackedScene" uid="uid://bgxu0i53h6yf6" path="res://Nodos/Objetos/llave.tscn" id="5_wdhlr"]
 

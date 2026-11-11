@@ -26,7 +26,6 @@ var estaAbierta : bool = false
 var animacionEnCurso : bool = false
 
 func _ready() -> void:
-	animation.stop()
 	_desactivar_loop(abrir)
 	_desactivar_loop(abrirlento)
 	_desactivar_loop(cerrar)

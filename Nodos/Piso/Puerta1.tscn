@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bvhqwb4r2l742"]
 
-[ext_resource type="Script" uid="uid://syw4pja3ckei" path="res://scripts/puerta.gd" id="1_um0nn"]
+[ext_resource type="Script" uid="uid://syw4pja3ckei" path="res://scripts/puerta_1.gd" id="1_um0nn"]
 [ext_resource type="AudioStream" uid="uid://sy3xgnae7lcq" path="res://Assets/Audios/abrir.MP3" id="2_efe1s"]
 [ext_resource type="AudioStream" uid="uid://c6xfyxfyi686o" path="res://Assets/Audios/abrirlento.MP3" id="3_uvmhh"]
 [ext_resource type="AudioStream" uid="uid://chv6b6vq5b8g0" path="res://Assets/Audios/cerrarlento.MP3" id="4_vn73p"]
@@ -9,7 +9,7 @@
 albedo_color = Color(0.7294118, 0.1764706, 0.13725491, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
-size = Vector3(0.16113281, 1.5712891, 1)
+size = Vector3(0.16113281, 1.5712891, 1.0584717)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtybb"]
 albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
@@ -300,7 +300,7 @@ _data = {
 &"cerrarlento": SubResource("Animation_vn73p")
 }
 
-[node name="StaticBody3D" type="StaticBody3D" unique_id=1690585863 groups=["puertas"]]
+[node name="Puerta 1" type="StaticBody3D" unique_id=1690585863 groups=["puertas"]]
 script = ExtResource("1_um0nn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=456810294]

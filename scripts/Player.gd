@@ -18,9 +18,9 @@ var rotacionVertical : float = 0
 var inventario : Array = [null, null, null, null, null, null, null, null, null]
 
 @onready var player_mesh : Node3D = $Mesh
-@onready var camera = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D
+@onready var camera = $Camera3D
 @onready var anim_player = $AnimationPlayer 
-@onready var rayCast = $Mesh/Armature/Skeleton3D/BoneAttachment3D/Camera3D/RayCast3D
+@onready var rayCast = $Camera3D/RayCast3D
 var tiempo : float = 0
 var puerta : Node3D = null
 func _ready() -> void:

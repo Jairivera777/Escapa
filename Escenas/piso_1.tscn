@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cagvncikghfpx"]
+
+[ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/piso_piso1.tscn" id="1_gtkgg"]
+[ext_resource type="PackedScene" uid="uid://bmyf74egu8k4u" path="res://Nodos/Piso/puerta_2.tscn" id="2_h4n7x"]
+[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="3_h4n7x"]
+[ext_resource type="PackedScene" uid="uid://cl5isndm000fd" path="res://Nodos/Piso/pared1.tscn" id="4_eq03u"]
+[ext_resource type="PackedScene" uid="uid://b4h2pgecjagdw" path="res://Nodos/Piso/pared2.tscn" id="5_uhuhp"]
+[ext_resource type="PackedScene" uid="uid://bfhk6m441q5p1" path="res://Nodos/Piso/pared3.tscn" id="6_aqa3s"]
+[ext_resource type="PackedScene" uid="uid://2sc1cgorhho" path="res://Nodos/Piso/pared3_1.tscn" id="7_hr374"]
+
+[node name="Piso 1" type="Node3D" unique_id=110682684]
+
+[node name="Piso" parent="." unique_id=770946294 instance=ExtResource("1_gtkgg")]
+transform = Transform3D(0.9738098, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Puerta 2" parent="." unique_id=1690585863 instance=ExtResource("2_h4n7x")]
+transform = Transform3D(-0.017326485, 0, -0.99984986, 0, 1, 0, 0.99984986, 0, -0.017326485, -0.0058743358, 0.96138763, -4.063985)
+script = null
+
+[node name="Player" parent="." unique_id=975440235 instance=ExtResource("3_h4n7x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23119795, 0.20529279, -0.5513474)
+
+[node name="Node3D" parent="." unique_id=1918301823 instance=ExtResource("4_eq03u")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.0210057, 0, 1, 0, -4.371139e-08, -1.6747432, 0.91613424, -4.048066)
+
+[node name="Pared 1" parent="." unique_id=113778299 instance=ExtResource("5_uhuhp")]
+transform = Transform3D(-0.0150270015, 0, -0.9998871, 0, 1.0164499, 0, 0.9998871, 0, -0.0150270015, 1.6313467, 0.9023957, -4.0328436)
+
+[node name="Pared 2" parent="." unique_id=1472385316 instance=ExtResource("6_aqa3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.117809, 0.9116821, -3.5445395)
+
+[node name="Pared 3" parent="." unique_id=305631862 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -2.48566)
+
+[node name="Pared 4" parent="." unique_id=1251321268 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -1.4244292)
+
+[node name="Pared 5" parent="." unique_id=2304383 instance=ExtResource("7_hr374")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -0.37973055)
