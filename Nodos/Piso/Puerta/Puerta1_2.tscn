@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://di5jx5cxsnolh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e8l2"]
+albedo_color = Color(0.7294118, 0.1764706, 0.13725491, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_djkyo"]
+size = Vector3(0.16113281, 1.9686584, 1.2516232)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtybb"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_urucu"]
+radius = 0.11425781
+height = 0.22851563
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_baewj"]
+size = Vector3(0.18881226, 1.9874191, 1.2278442)
+
+[node name="Puerta 1_2" type="StaticBody3D" unique_id=1690585863]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=456810294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0065686703, 0.18692338, -0.061855078)
+material_override = SubResource("StandardMaterial3D_7e8l2")
+mesh = SubResource("BoxMesh_djkyo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1114103681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0020710826, 0.025466397, 0.37156606)
+material_override = SubResource("StandardMaterial3D_vtybb")
+mesh = SubResource("CapsuleMesh_urucu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1597709454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059051514, 0.18505478, -0.05130005)
+shape = SubResource("BoxShape3D_baewj")

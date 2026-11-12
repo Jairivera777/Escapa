@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bfhk6m441q5p1"]
+[gd_scene format=3 uid="uid://2sc1cgorhho"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64jmu"]
 
@@ -29,7 +29,7 @@ size = Vector3(0.17797852, 1.027771, 0.6354675)
 albedo_color = Color(0.6666667, 0.2901961, 0.26666668, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtybb"]
-albedo_color = Color(0.6666667, 0.2901961, 0.07450981, 1)
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7e8l2"]
 material = SubResource("StandardMaterial3D_vtybb")
@@ -86,7 +86,7 @@ operation = 2
 mesh = SubResource("BoxMesh_4uumu")
 
 [node name="CSGMesh3D3" type="CSGMesh3D" parent="CSGCombiner3D2" unique_id=1286874323]
-transform = Transform3D(0.16300797, 0, 0, 0, 0.12189582, 0, 0, 0, 0.9302537, 0, -0.7241543, 0.05346954)
+transform = Transform3D(0.16300797, 0, 0, 0, 0.12189582, 0, 0, 0, 1.0774004, 0, -0.7241543, -0.017055213)
 material_override = SubResource("StandardMaterial3D_jwamv")
 mesh = SubResource("BoxMesh_7e8l2")
 

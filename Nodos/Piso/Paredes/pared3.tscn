@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cl5isndm000fd"]
+[gd_scene format=3 uid="uid://bfhk6m441q5p1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64jmu"]
 
@@ -29,7 +29,7 @@ size = Vector3(0.17797852, 1.027771, 0.6354675)
 albedo_color = Color(0.6666667, 0.2901961, 0.26666668, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtybb"]
-albedo_color = Color(0.6666667, 0.2901961, 0.07450981, 1)
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7e8l2"]
 material = SubResource("StandardMaterial3D_vtybb")
@@ -57,6 +57,13 @@ size = Vector3(0.1846714, 0.8060303, 0.18151855)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7e8l2"]
 size = Vector3(0.18896484, 2.418686, 1.1162109)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sk5vk"]
+albedo_color = Color(0.56078434, 0.56078434, 0.56078434, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_66bdo"]
+material = SubResource("StandardMaterial3D_sk5vk")
+size = Vector3(0.16547012, 0.7836914, 0.038490295)
 
 [node name="Pared 1" type="StaticBody3D" unique_id=1918301823]
 
@@ -92,9 +99,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0042993054, 1.5883448, -0.0
 mesh = SubResource("BoxMesh_vtybb")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1956296190]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049943924, 1.1541436, -0.47325307)
+transform = Transform3D(0.93636173, 0, 0, 0, 1, 0, 0, 0, 0.91789937, 0.0049943924, 1.1541436, -0.46544206)
 mesh = SubResource("BoxMesh_qph7b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1526034785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0056152344, 0.41358185, -0.020019531)
 shape = SubResource("BoxShape3D_7e8l2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=653821677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014852524, 1.1794112, 0.1760771)
+mesh = SubResource("BoxMesh_66bdo")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D4" unique_id=2090371483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009985566, 0.0025413036, -0.34924155)
+mesh = SubResource("BoxMesh_66bdo")

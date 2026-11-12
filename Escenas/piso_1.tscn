@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cagvncikghfpx"]
 
-[ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/piso_piso1.tscn" id="1_gtkgg"]
-[ext_resource type="PackedScene" uid="uid://bmyf74egu8k4u" path="res://Nodos/Piso/puerta_2.tscn" id="2_h4n7x"]
+[ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/Pisos/piso_piso1.tscn" id="1_gtkgg"]
+[ext_resource type="PackedScene" uid="uid://bmyf74egu8k4u" path="res://Nodos/Piso/Puerta/puerta_2.tscn" id="2_h4n7x"]
 [ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="3_h4n7x"]
-[ext_resource type="PackedScene" uid="uid://cl5isndm000fd" path="res://Nodos/Piso/pared1.tscn" id="4_eq03u"]
-[ext_resource type="PackedScene" uid="uid://b4h2pgecjagdw" path="res://Nodos/Piso/pared2.tscn" id="5_uhuhp"]
-[ext_resource type="PackedScene" uid="uid://bfhk6m441q5p1" path="res://Nodos/Piso/pared3.tscn" id="6_aqa3s"]
-[ext_resource type="PackedScene" uid="uid://2sc1cgorhho" path="res://Nodos/Piso/pared3_1.tscn" id="7_hr374"]
+[ext_resource type="PackedScene" uid="uid://cl5isndm000fd" path="res://Nodos/Piso/Paredes/pared1.tscn" id="4_eq03u"]
+[ext_resource type="PackedScene" uid="uid://b4h2pgecjagdw" path="res://Nodos/Piso/Paredes/pared2.tscn" id="5_uhuhp"]
+[ext_resource type="PackedScene" uid="uid://bfhk6m441q5p1" path="res://Nodos/Piso/Paredes/pared3.tscn" id="6_aqa3s"]
+[ext_resource type="PackedScene" uid="uid://2sc1cgorhho" path="res://Nodos/Piso/Paredes/pared3_1.tscn" id="7_hr374"]
+[ext_resource type="PackedScene" uid="uid://bci6ya3wnd7t1" path="res://Nodos/Piso/Paredes/Pared Izq.tscn" id="8_b7c5y"]
+[ext_resource type="PackedScene" uid="uid://bkfw4on2hifrl" path="res://Nodos/Piso/Techo/techo.tscn" id="9_cp2g5"]
 
 [node name="Piso 1" type="Node3D" unique_id=110682684]
 
@@ -63,3 +65,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 9.33642
 
 [node name="Pared 11" parent="." unique_id=239141303 instance=ExtResource("7_hr374")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 10.391606)
+
+[node name="StaticBody3D" parent="." unique_id=901582708 instance=ExtResource("8_b7c5y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2361097, 0.9465952, -3.5113342)
+
+[node name="Techo" parent="." unique_id=1934693407 instance=ExtResource("9_cp2g5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6602526, 0)
