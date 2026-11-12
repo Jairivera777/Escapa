@@ -44,10 +44,10 @@ albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8qknp"]
 material = SubResource("StandardMaterial3D_qph7b")
-size = Vector3(0.14147949, 2.4379272, 0.13192749)
+size = Vector3(0.6917572, 2.4379272, 0.13192749)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yvjll"]
-size = Vector3(0.15075684, 2.423767, 0.14950562)
+size = Vector3(0.72372437, 2.423767, 0.14950562)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtybb"]
 size = Vector3(0.16351318, 0.41461182, 1.2652588)
@@ -83,11 +83,11 @@ transform = Transform3D(1, 0, 0, 0, 1.00993, 0, 0, 0, 1, -0.004289508, 1.398143,
 mesh = SubResource("BoxMesh_koaty")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=310591181]
-transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -0.014099121, 0.3740214, 3.7928028)
+transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -0.28923798, 0.3740214, 3.7928028)
 mesh = SubResource("BoxMesh_8qknp")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=2020575295]
-transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -0.0032958984, 0.4123285, 3.8011494)
+transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -0.28977966, 0.4123285, 3.8011494)
 shape = SubResource("BoxShape3D_yvjll")
 
 [node name="Puerta 1_2" parent="." unique_id=1690585863 instance=ExtResource("1_gwd7m")]
