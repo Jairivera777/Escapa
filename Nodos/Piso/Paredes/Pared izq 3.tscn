@@ -49,7 +49,11 @@ albedo_color = Color(0.56078434, 0.56078434, 0.56078434, 1)
 size = Vector3(0.22906494, 2.5181885, 0.15325928)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dedig"]
-size = Vector3(0.24439049, 2.4580994, 0.14950562)
+size = Vector3(3.990998, 2.4580994, 0.14950562)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qumu6"]
+material = SubResource("StandardMaterial3D_dgmrc")
+size = Vector3(2.9497638, 2.4379272, 0.13192749)
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=901582708]
 
@@ -94,5 +98,9 @@ material_override = SubResource("StandardMaterial3D_qumu6")
 mesh = SubResource("BoxMesh_fg1tg")
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=522443465]
-transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -0.04825306, 0.356909, 2.0867052)
+transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -1.9215568, 0.356909, 2.0867052)
 shape = SubResource("BoxShape3D_dedig")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1676409507]
+transform = Transform3D(1.2736253, 0, 0, 0, 1.0272073, 0, 0, 0, 1, -2.0145674, 0.36989152, 2.0954041)
+mesh = SubResource("BoxMesh_qumu6")

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dy1xc0e5aepvg"]
+
+[ext_resource type="PackedScene" uid="uid://cagvncikghfpx" path="res://Nodos/Sitios/Pasillo Auditorios.tscn" id="1_364rr"]
+[ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/Pisos/piso_piso1.tscn" id="1_gtkgg"]
+[ext_resource type="PackedScene" uid="uid://bkfw4on2hifrl" path="res://Nodos/Piso/Techo/techo.tscn" id="9_cp2g5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e8l2"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
+size = Vector3(1, 2.4804077, 1.55719)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jo26l"]
+size = Vector3(1.0623779, 2.4658508, 1.6314087)
+
+[node name="Piso 1" type="Node3D" unique_id=996878730]
+
+[node name="Pasillo" parent="." unique_id=110682684 instance=ExtResource("1_364rr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43621194, 0, -3.1673012)
+
+[node name="Pasillo Central" type="Node3D" parent="." unique_id=852133055]
+
+[node name="Piso" parent="Pasillo Central" unique_id=770946294 instance=ExtResource("1_gtkgg")]
+transform = Transform3D(1.5931126, 0, 0, 0, 1, 0, 0, 0, 0.30689055, -1.8912282, 0.002884984, 17.613203)
+
+[node name="Techo" parent="Pasillo Central" unique_id=2019591978 instance=ExtResource("9_cp2g5")]
+transform = Transform3D(1.6403698, 0, 0, 0, 1, 0, 0, 0, 0.32413056, -2.131442, 2.6667233, 17.735619)
+
+[node name="Pared escalera" type="StaticBody3D" parent="Pasillo Central" unique_id=1740643174]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pasillo Central/Pared escalera" unique_id=136117149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0442805, 1.3573049, 19.442068)
+material_override = SubResource("StandardMaterial3D_7e8l2")
+mesh = SubResource("BoxMesh_jo26l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pasillo Central/Pared escalera" unique_id=930082437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0031366, 1.3646472, 19.448486)
+shape = SubResource("BoxShape3D_jo26l")
