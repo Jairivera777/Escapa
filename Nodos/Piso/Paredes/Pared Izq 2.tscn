@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://drsdivocwkmxp"]
+
+[ext_resource type="PackedScene" uid="uid://c5v7x57e65sep" path="res://Nodos/Piso/Puerta/puerta_2_1_estatica.tscn" id="1_t0gm7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qph7b"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_spysb"]
+material = SubResource("StandardMaterial3D_qph7b")
+size = Vector3(0.7055321, 2.4379272, 0.13192749)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oktdo"]
+size = Vector3(1.161644, 2.423767, 0.14950562)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e8l2"]
+albedo_color = Color(0.56078434, 0.56078434, 0.56078434, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
+size = Vector3(0.22906494, 2.5181885, 0.15325928)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=901582708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2361097, 0.9465952, -3.5113342)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=310591181]
+transform = Transform3D(1.2736253, 0, 0, 0, 1.0272073, 0, 0, 0, 1, 2.1497095, 0, 3.5406404)
+mesh = SubResource("BoxMesh_spysb")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=2020575295]
+transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, 2.2807503, 0, 3.5406404)
+shape = SubResource("BoxShape3D_oktdo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1002707577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7046108, -0.015930176, 3.5463612)
+material_override = SubResource("StandardMaterial3D_7e8l2")
+mesh = SubResource("BoxMesh_jo26l")
+
+[node name="Puerta 2" parent="." unique_id=1690585863 instance=ExtResource("1_t0gm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7531228, -0.4133067, 4.7294645)
+
+[node name="Puerta 3" parent="." unique_id=410103896 instance=ExtResource("1_t0gm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7531228, -0.4133067, 6.9681687)
+
+[node name="Puerta 4" parent="." unique_id=290664437 instance=ExtResource("1_t0gm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7531228, -0.4133067, 9.20078)
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=857682092]
+transform = Transform3D(1.2736253, 0, 0, 0, 1.0272073, 0, 0, 0, 1, 2.1497095, 0, 10.431287)
+mesh = SubResource("BoxMesh_spysb")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=660971893]
+transform = Transform3D(1, 0, 0, 0, 1.0272073, 0, 0, 0, 1, 2.2807503, 0, 10.431287)
+shape = SubResource("BoxShape3D_oktdo")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2127466804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7046108, -0.015930176, 10.437008)
+material_override = SubResource("StandardMaterial3D_7e8l2")
+mesh = SubResource("BoxMesh_jo26l")
