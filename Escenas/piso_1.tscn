@@ -2,16 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://cagvncikghfpx" path="res://Nodos/Sitios/Pasillo Auditorios.tscn" id="1_364rr"]
 [ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/Pisos/piso_piso1.tscn" id="1_gtkgg"]
+[ext_resource type="PackedScene" uid="uid://c5sdbml81feg3" path="res://Nodos/Piso/Paredes/pared_escalera.tscn" id="4_eq03u"]
+[ext_resource type="PackedScene" uid="uid://brilfkg84442m" path="res://Nodos/Piso/Paredes/Escalera.tscn" id="5_uhuhp"]
+[ext_resource type="PackedScene" uid="uid://bvhqwb4r2l742" path="res://Nodos/Piso/Puerta/Puerta1.tscn" id="6_aqa3s"]
 [ext_resource type="PackedScene" uid="uid://bkfw4on2hifrl" path="res://Nodos/Piso/Techo/techo.tscn" id="9_cp2g5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e8l2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhuhp"]
 albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
-size = Vector3(1, 2.4804077, 1.55719)
+size = Vector3(0.13269043, 2.4603882, 2.4246826)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jo26l"]
-size = Vector3(1.0623779, 2.4658508, 1.6314087)
+[sub_resource type="BoxMesh" id="BoxMesh_uhuhp"]
+size = Vector3(0.13269043, 2.4603882, 3.218689)
 
 [node name="Piso 1" type="Node3D" unique_id=996878730]
 
@@ -21,18 +24,49 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43621194, 0, -3.1673012)
 [node name="Pasillo Central" type="Node3D" parent="." unique_id=852133055]
 
 [node name="Piso" parent="Pasillo Central" unique_id=770946294 instance=ExtResource("1_gtkgg")]
-transform = Transform3D(1.5931126, 0, 0, 0, 1, 0, 0, 0, 0.30689055, -1.8912282, 0.002884984, 17.613203)
+transform = Transform3D(1.7006927, 0, 0, 0, 1, 0, 0, 0, 0.30689055, -2.1587014, 0.002884984, 17.613203)
 
 [node name="Techo" parent="Pasillo Central" unique_id=2019591978 instance=ExtResource("9_cp2g5")]
-transform = Transform3D(1.6403698, 0, 0, 0, 1, 0, 0, 0, 0.32413056, -2.131442, 2.6667233, 17.735619)
+transform = Transform3D(1.6403698, 0, 0, 0, 1, 0, 0, 0, 0.4071754, -2.131442, 2.6667233, 18.15406)
 
-[node name="Pared escalera" type="StaticBody3D" parent="Pasillo Central" unique_id=1740643174]
+[node name="Piso2" parent="Pasillo Central" unique_id=923554535 instance=ExtResource("1_gtkgg")]
+transform = Transform3D(5.583695, 0, 0, 0, 1, 0, 0, 0, 0.2929846, -11.150993, 0, 22.833223)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pasillo Central/Pared escalera" unique_id=136117149]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0442805, 1.3573049, 19.442068)
-material_override = SubResource("StandardMaterial3D_7e8l2")
+[node name="Escalera" parent="Pasillo Central" unique_id=1162112529 instance=ExtResource("5_uhuhp")]
+transform = Transform3D(1, 0, 0, 0, 0.74937207, 0, 0, 0, 1, -6.913781, -0.0035245419, 17.585234)
+
+[node name="Escalera2" parent="Pasillo Central" unique_id=1524555030 instance=ExtResource("5_uhuhp")]
+transform = Transform3D(-0.9999998, 0, 0.0006224234, 0, 0.749, 0, -0.0006224234, 0, -0.9999998, -13.430294, 0, 20.421743)
+
+[node name="Piso3" parent="Pasillo Central" unique_id=2097672776 instance=ExtResource("1_gtkgg")]
+transform = Transform3D(0.5163955, 0, 0, 0, 1, 0, 0, 0, 0.22342391, -10.240991, 1.5268629, 17.139065)
+
+[node name="Escalera3" parent="Pasillo Central" unique_id=96046587 instance=ExtResource("5_uhuhp")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 0.749, 0, 1.509958e-07, 0, -1, -7.951638, 1.548288, 20.457573)
+
+[node name="Pared escalera" parent="Pasillo Central" unique_id=772881896 instance=ExtResource("4_eq03u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8104334, -0.022669315, 19.252718)
+
+[node name="Escalera4" parent="Pasillo Central" unique_id=665188459 instance=ExtResource("5_uhuhp")]
+transform = Transform3D(1, 0, 0, 0, 0.749, 0, 0, 0, 1, -12.502827, 1.5603962, 17.551931)
+
+[node name="Piso4" parent="Pasillo Central" unique_id=1209854253 instance=ExtResource("1_gtkgg")]
+transform = Transform3D(0.8186655, 0, 0, 0, 1, 0, 0, 0, 0.09556866, -16.371788, -4.1007996e-05, 19.717356)
+
+[node name="Pared Baño" type="StaticBody3D" parent="Pasillo Central" unique_id=258756460]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pasillo Central/Pared Baño" unique_id=1345840815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.324251, 1.3494661, 20.489222)
+material_override = SubResource("StandardMaterial3D_uhuhp")
 mesh = SubResource("BoxMesh_jo26l")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pasillo Central/Pared escalera" unique_id=930082437]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0031366, 1.3646472, 19.448486)
-shape = SubResource("BoxShape3D_jo26l")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pasillo Central/Pared Baño" unique_id=1690437115]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -19.909506, 1.3494661, 21.594336)
+material_override = SubResource("StandardMaterial3D_uhuhp")
+mesh = SubResource("BoxMesh_uhuhp")
+
+[node name="Techo2" parent="Pasillo Central" unique_id=689653801 instance=ExtResource("9_cp2g5")]
+transform = Transform3D(3.9704883, 0, 0, 0, 1, 0, 0, 0, 0.4176663, -14.6912155, 2.6711082, 23.340239)
+
+[node name="Puerta 1" parent="." unique_id=1690585863 instance=ExtResource("6_aqa3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.07997, 0.91168225, 25.740063)

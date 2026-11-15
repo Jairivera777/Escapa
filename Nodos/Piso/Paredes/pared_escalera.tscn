@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c5sdbml81feg3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e8l2"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
+size = Vector3(1, 2.4804077, 3.2260818)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jo26l"]
+size = Vector3(1.082016, 2.5006256, 3.312355)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwamv"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7e8l2"]
+size = Vector3(3.8730469, 2.5231934, 0.1706543)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7e8l2"]
+size = Vector3(3.8841553, 2.5429688, 0.2833252)
+
+[node name="Pared escalera" type="StaticBody3D" unique_id=772881896]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1973854056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6153646, 1.3573049, 0.9932289)
+material_override = SubResource("StandardMaterial3D_7e8l2")
+mesh = SubResource("BoxMesh_jo26l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1835045710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6466894, 1.3820345, 1.0056744)
+shape = SubResource("BoxShape3D_jo26l")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=442111905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8265009, 1.3759108, 2.5576634)
+material_override = SubResource("StandardMaterial3D_jwamv")
+mesh = SubResource("BoxMesh_7e8l2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=805698399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82357407, 1.3758049, 2.5687275)
+shape = SubResource("BoxShape3D_7e8l2")
