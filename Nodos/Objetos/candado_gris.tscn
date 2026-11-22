@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7nxxfw5d5ns3"]
+
+[ext_resource type="PackedScene" uid="uid://dv0hpg3fjodxw" path="res://Assets/Models/Objects/candado_gris.blend" id="1_pau6w"]
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=2093430986]
+
+[node name="candado_gris" parent="." unique_id=720616337 instance=ExtResource("1_pau6w")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

@@ -30,11 +30,12 @@ func actualizarSlots() -> void:
 			slot.modulate = Color.GREEN
 		else:
 			slot.modulate = Color.WHITE
-	var itemActivo = jugador.inventario[slotActivo] if slotActivo < jugador.inventario.size() else null
-	if itemActivo != null:
-		label.text = itemActivo.nombre
-	else:
-		label.text = ""
+	if !mensajeTemporal:
+		var itemActivo = jugador.inventario[slotActivo] if slotActivo < jugador.inventario.size() else null
+		if itemActivo != null:
+			label.text = itemActivo.nombre
+		else:
+			label.text = ""
 func _process(delta: float) -> void:
 	if not jugador:
 		return
@@ -66,8 +67,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				slotActivo = slots.size()-1
 			actualizarSlots()
 func mostrarMensajeLleno() -> void:
+	mostrarMensaje("¡Inventario Lleno!")
+func mostrarMensaje(texto: String) -> void:
 	mensajeTemporal = true
-	label.text = "¡Inventario Lleno!"
-	await get_tree().create_timer(5).timeout
+	label.text = texto
+	await get_tree().create_timer(3).timeout
 	mensajeTemporal = false
 	actualizarSlots()

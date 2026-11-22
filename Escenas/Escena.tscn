@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bvhqwb4r2l742" path="res://Nodos/Piso/Puerta/Puerta1.tscn" id="3_g8s6d"]
 [ext_resource type="PackedScene" uid="uid://cnqh4mkfds4fx" path="res://Escenas/pausa.tscn" id="4_bsl8t"]
 [ext_resource type="PackedScene" uid="uid://bgxu0i53h6yf6" path="res://Nodos/Objetos/llave.tscn" id="5_wdhlr"]
+[ext_resource type="PackedScene" uid="uid://bfertow0smnjv" path="res://Nodos/Piso/Puerta/puerta_bloqueada_gris.tscn" id="6_t88vv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rg50c"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,3 +43,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26369905, 1.0361215, -1.010
 
 [node name="llave" parent="." unique_id=1136991738 instance=ExtResource("5_wdhlr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8724527, 0.23796073, -5.0027885)
+
+[node name="PuertaBloqueadaGris" parent="." unique_id=783614712 instance=ExtResource("6_t88vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7886586, 0.9870236, -1.4722261)

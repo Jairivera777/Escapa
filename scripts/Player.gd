@@ -12,7 +12,6 @@ var speed : float
 @export var min_pitch : float = deg_to_rad(-89.0) 
 @export var max_pitch : float = deg_to_rad(89.0)
 var rotacionVertical : float = 0  
-
 @export_category("Inventario")
 @export var tamano : int = 9
 var inventario : Array = [null, null, null, null, null, null, null, null, null]
@@ -21,6 +20,7 @@ var inventario : Array = [null, null, null, null, null, null, null, null, null]
 @onready var camera = $Camera3D
 @onready var anim_player = $AnimationPlayer 
 @onready var rayCast = $Camera3D/RayCast3D
+@onready var hotbar =$CanvasLayer/hotBar
 var tiempo : float = 0
 var puerta : Node3D = null
 func _ready() -> void:
@@ -28,6 +28,9 @@ func _ready() -> void:
 	rayCast.add_exception(self)
 	inventario.resize(tamano)
 	inventario.fill(null)
+	if hotbar == null:
+		hotbar = find_child("hotBar", true, false)
+	print("Hotbar encontrada en player: ", hotbar)
 func agregarInventario(nombreItem : String, imagen : Texture2D) -> bool:
 	for i in range (inventario.size()):
 		if inventario[i] == null:
@@ -91,14 +94,20 @@ func interactuarObjeto(delta : float):
 			if Input.is_action_pressed("Interactuar") and puerta != null:
 				tiempo += delta
 				if tiempo >= 0.25:
-					puerta.interactuar(true)
+					var slotSeleccionado = inventario[hotbar.slotActivo] if hotbar else null
+					puerta.interactuar(true, slotSeleccionado, self)
 					puerta = null
 			if Input.is_action_just_released("Interactuar"):
 				if puerta != null:
 					if tiempo < 0.25:
-						puerta.interactuar(false)
+						var slotSeleccionado = inventario[hotbar.slotActivo] if hotbar else null
+						puerta.interactuar(false, slotSeleccionado, self)
 					puerta = null
 					tiempo = 0.0
+func consumirItem() -> void:
+	if hotbar:
+		inventario[hotbar.slotActivo] = null
+		hotbar.actualizarSlots()
 func animate():
 	var velocidad_horizontal = Vector2(velocity.x, velocity.z).length()
 	var nueva_animacion = "Idle"
@@ -114,3 +123,6 @@ func animate():
 	
 	if anim_player.current_animation != nueva_animacion:
 		anim_player.play(nueva_animacion, 0.2)
+func mostrarAviso(texto: String) -> void:
+	if hotbar:
+		hotbar.mostrarMensaje(texto)
