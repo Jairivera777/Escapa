@@ -135,3 +135,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.226069, 1.0082743, 17.4441
 
 [node name="Pared 15" parent="." unique_id=869653220 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 19.030142)
+
+[node name="Pared 16" parent="." unique_id=242863064 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 20.119247)
+
+[node name="Puerta 11" parent="." unique_id=487670705 instance=ExtResource("1_gy2e5")]
+transform = Transform3D(-0.9998222, 0, 0.018853946, 0, 1, 0, -0.018853946, 0, -0.9998222, 2.1026926, 0.9146887, 21.689445)
+script = null
+
+[node name="Pared 17" parent="." unique_id=391049427 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 23.33085)
+
+[node name="Pared 18" parent="." unique_id=755987848 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 24.394756)

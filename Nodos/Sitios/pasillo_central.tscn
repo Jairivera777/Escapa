@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://co24s0l6o4coo"]
+
+[ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/Pisos/piso_piso1.tscn" id="1_shw7a"]
+[ext_resource type="PackedScene" uid="uid://bkfw4on2hifrl" path="res://Nodos/Piso/Techo/techo.tscn" id="2_8jg81"]
+[ext_resource type="PackedScene" uid="uid://brilfkg84442m" path="res://Nodos/Piso/Paredes/Escalera.tscn" id="3_thrac"]
+[ext_resource type="PackedScene" uid="uid://c5sdbml81feg3" path="res://Nodos/Piso/Paredes/pared_escalera.tscn" id="4_cy8d4"]
+[ext_resource type="PackedScene" uid="uid://bfhk6m441q5p1" path="res://Nodos/Piso/Paredes/pared3.tscn" id="5_thrac"]
+[ext_resource type="PackedScene" uid="uid://bmyf74egu8k4u" path="res://Nodos/Piso/Puerta/puerta_2.tscn" id="6_cy8d4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhuhp"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
+size = Vector3(0.13269043, 2.4603882, 2.4246826)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uhuhp"]
+size = Vector3(0.13269043, 2.4603882, 3.218689)
+
+[node name="Pasillo Central2" type="Node3D" unique_id=447548017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4982843, 0, 0.30007172)
+
+[node name="Piso" parent="." unique_id=770946294 instance=ExtResource("1_shw7a")]
+transform = Transform3D(1.7006927, 0, 0, 0, 1, 0, 0, 0, 0.30689055, 3.29116, 0.002884984, -4.511938)
+
+[node name="Techo" parent="." unique_id=123852882 instance=ExtResource("2_8jg81")]
+transform = Transform3D(1.6403698, 0, 0, 0, 1, 0, 0, 0, 0.4071754, 3.3184195, 2.6667233, -3.9710808)
+
+[node name="Piso2" parent="." unique_id=1073602832 instance=ExtResource("1_shw7a")]
+transform = Transform3D(5.583695, 0, 0, 0, 1, 0, 0, 0, 0.2929846, -5.701132, 0, 0.7080822)
+
+[node name="Escalera" parent="." unique_id=1162112529 instance=ExtResource("3_thrac")]
+transform = Transform3D(1, 0, 0, 0, 0.74937207, 0, 0, 0, 1, -1.4639196, -0.0035245419, -4.5399075)
+
+[node name="Escalera2" parent="." unique_id=1581754803 instance=ExtResource("3_thrac")]
+transform = Transform3D(-0.9999998, 0, 0.0006224234, 0, 0.749, 0, -0.0006224234, 0, -0.9999998, -7.9804325, 0, -1.7033978)
+
+[node name="Piso3" parent="." unique_id=1790765211 instance=ExtResource("1_shw7a")]
+transform = Transform3D(0.5163955, 0, 0, 0, 1, 0, 0, 0, 0.22342391, -4.791129, 1.5268629, -4.9860764)
+
+[node name="Escalera3" parent="." unique_id=931456269 instance=ExtResource("3_thrac")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 0.749, 0, 1.509958e-07, 0, -1, -2.5017767, 1.548288, -1.6675682)
+
+[node name="Pared escalera" parent="." unique_id=772881896 instance=ExtResource("4_cy8d4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3605719, -0.022669315, -2.8724232)
+
+[node name="Escalera4" parent="." unique_id=1634134675 instance=ExtResource("3_thrac")]
+transform = Transform3D(1, 0, 0, 0, 0.749, 0, 0, 0, 1, -7.052965, 1.5603962, -4.57321)
+
+[node name="Piso4" parent="." unique_id=505217665 instance=ExtResource("1_shw7a")]
+transform = Transform3D(0.8186655, 0, 0, 0, 1, 0, 0, 0, 0.09556866, -10.9219265, -4.1007996e-05, -2.4077854)
+
+[node name="Pared Baño" type="StaticBody3D" parent="." unique_id=1149208896]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pared Baño" unique_id=984993709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.87439, 1.3494661, -1.6359196)
+material_override = SubResource("StandardMaterial3D_uhuhp")
+mesh = SubResource("BoxMesh_jo26l")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pared Baño" unique_id=1087713966]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.459644, 1.3494661, -0.5308056)
+material_override = SubResource("StandardMaterial3D_uhuhp")
+mesh = SubResource("BoxMesh_uhuhp")
+
+[node name="Techo2" parent="." unique_id=298443785 instance=ExtResource("2_8jg81")]
+transform = Transform3D(3.9704883, 0, 0, 0, 1, 0, 0, 0, 0.4176663, -9.241354, 2.6711082, 1.2150974)
+
+[node name="Pared 1" parent="." unique_id=1918301823 instance=ExtResource("5_thrac")]
+transform = Transform3D(-0.007672876, 0, -1.4092206, 0, 1, 0, 0.9711545, 0, -0.011133939, 2.555469, 0.911682, 6.659279)
+
+[node name="Pared 2" parent="." unique_id=1991483955 instance=ExtResource("5_thrac")]
+transform = Transform3D(-0.007672875, 0, -1.4092205, 0, 1, 0, 0.97115445, 0, -0.011133938, 1.0579004, 0.911682, 6.659279)
+
+[node name="Puerta 2" parent="." unique_id=1690585863 instance=ExtResource("6_cy8d4")]
+transform = Transform3D(-0.017625893, 0, -0.9998447, 0, 0.9686923, 0, 0.9998447, 0, -0.017625893, -0.76354504, 0.9538357, 6.5722294)
+script = null
+
+[node name="Puerta 3" parent="." unique_id=1053217031 instance=ExtResource("6_cy8d4")]
+transform = Transform3D(-0.01762589, 0, -0.99984455, 0, 0.9686922, 0, 0.99984455, 0, -0.01762589, -2.9902258, 0.9538357, 6.5722275)
+script = null
+
+[node name="Pared 3" parent="." unique_id=112812068 instance=ExtResource("5_thrac")]
+transform = Transform3D(-0.007672876, 0, -1.4092206, 0, 1, 0, 0.9711545, 0, -0.011133939, -4.87582, 0.93507624, 6.659279)
