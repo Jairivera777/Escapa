@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nmkcp1touexf"
+path="res://.godot/imported/Persona Corriendo 🔊- Efecto de Sonido🏃_♀️.mp3-cf40b3d33ee340584b8446bedb0895d3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audios/Persona Corriendo 🔊- Efecto de Sonido🏃_♀️.mp3"
+dest_files=["res://.godot/imported/Persona Corriendo 🔊- Efecto de Sonido🏃_♀️.mp3-cf40b3d33ee340584b8446bedb0895d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

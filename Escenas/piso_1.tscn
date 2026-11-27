@@ -3,6 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://cagvncikghfpx" path="res://Nodos/Sitios/Pasillo Auditorios.tscn" id="1_364rr"]
 [ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/Pisos/piso_piso1.tscn" id="1_gtkgg"]
 [ext_resource type="PackedScene" uid="uid://co24s0l6o4coo" path="res://Nodos/Sitios/pasillo_central.tscn" id="3_h4n7x"]
+[ext_resource type="PackedScene" uid="uid://bfhk6m441q5p1" path="res://Nodos/Piso/Paredes/pared3.tscn" id="4_hr374"]
+[ext_resource type="PackedScene" uid="uid://cnqh4mkfds4fx" path="res://Escenas/pausa.tscn" id="4_uhuhp"]
+[ext_resource type="PackedScene" uid="uid://bkfw4on2hifrl" path="res://Nodos/Piso/Techo/techo.tscn" id="9_cp2g5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7e8l2"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jo26l"]
+material = SubResource("StandardMaterial3D_7e8l2")
+size = Vector3(5.1466675, 0.26293945, 32.275173)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jo26l"]
+size = Vector3(5.24292, 0.633667, 32.30214)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwamv"]
+albedo_color = Color(0.57317764, 0.58581066, 0.6110551, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7e8l2"]
+size = Vector3(0.6912842, 2.5342407, 0.7363281)
 
 [node name="Piso 1" type="Node3D" unique_id=996878730]
 
@@ -12,5 +31,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43621194, 0, -3.1673012)
 [node name="Pasillo Central2" parent="." unique_id=447548017 instance=ExtResource("3_h4n7x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3988066, 0, 22.1346)
 
-[node name="Piso" parent="." unique_id=770946294 instance=ExtResource("1_gtkgg")]
-transform = Transform3D(0.83606535, 0, 0, 0, 1, 0, 0, 0, 0.4426331, -0.10507822, 0.005078912, 30.521908)
+[node name="Pasillo izq" type="Node3D" parent="." unique_id=871389493]
+
+[node name="Piso" parent="Pasillo izq" unique_id=770946294 instance=ExtResource("1_gtkgg")]
+transform = Transform3D(1.2253152, 0, 0, 0, 1, 0, 0, 0, 0.4426331, -1.0206623, 0.005078912, 30.521908)
+
+[node name="Pared 1" parent="Pasillo izq" unique_id=1918301823 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 29.630386)
+
+[node name="Pared 2" parent="Pasillo izq" unique_id=1320645978 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 31.11795)
+
+[node name="Pared 3" parent="Pasillo izq" unique_id=1636264736 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 32.648224)
+
+[node name="Pared 4" parent="Pasillo izq" unique_id=1842577584 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 34.142685)
+
+[node name="Pared 5" parent="Pasillo izq" unique_id=116976408 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 35.680088)
+
+[node name="Pared 6" parent="Pasillo izq" unique_id=208193960 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 37.191437)
+
+[node name="Pared 7" parent="Pasillo izq" unique_id=1467725219 instance=ExtResource("4_hr374")]
+transform = Transform3D(0.97118485, 0, 0, 0, 1, 0, 0, 0, 1.4092646, -3.8444204, 0.911682, 38.720535)
+
+[node name="Techo3" parent="Pasillo izq" unique_id=958975722 instance=ExtResource("9_cp2g5")]
+transform = Transform3D(0.7864874, 0, 0, 0, 1, 0, 0, 0, 0.89379567, -0.1192162, 2.6775463, 27.006542)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2108554057]
+
+[node name="Pausa" parent="CanvasLayer" unique_id=1425336794 instance=ExtResource("4_uhuhp")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1583421042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.403948, -0.004760742, 8.874525)
+mesh = SubResource("BoxMesh_jo26l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D" unique_id=713503956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.067993164, -0.1831665, -0.007987976)
+shape = SubResource("BoxShape3D_jo26l")
+
+[node name="Techo" parent="." unique_id=164363619 instance=ExtResource("9_cp2g5")]
+transform = Transform3D(0.8535083, 0, 0, 0, -4.371139e-08, 0.16378665, 0, -1, -7.1593425e-09, 3.7780156, 0.38753092, 25.173855)
+
+[node name="Techo2" parent="." unique_id=919500291 instance=ExtResource("9_cp2g5")]
+transform = Transform3D(0.8677032, 0, 0, 0, 1, 0, 0, 0, 0.49712777, 3.7521648, 2.5947223, 18.83934)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1791379511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5468774, 1.2847595, 18.806479)
+material_override = SubResource("StandardMaterial3D_jwamv")
+mesh = SubResource("BoxMesh_7e8l2")

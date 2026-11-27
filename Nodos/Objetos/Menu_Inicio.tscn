@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cymf5uqvckew4"]
 
 [ext_resource type="PackedScene" uid="uid://8g8jbpyx6y2a" path="res://Escenas/Edificio completo.tscn" id="1_j5gb8"]
+[ext_resource type="Script" uid="uid://bv7jqnu24d2ab" path="res://scripts/menu_inicio.gd" id="1_slrng"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jwamv"]
 
@@ -40,6 +41,7 @@ loop = true
 
 [node name="Node3D" type="Node3D" unique_id=1076414688]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00963974, 0, -0.005265951)
+script = ExtResource("1_slrng")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=252974701]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 10.69625, 23.624798, 0)
@@ -71,6 +73,35 @@ autoplay = true
 
 [node name="Control" type="Control" parent="CanvasLayer" unique_id=1204942093]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=199027408]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 107.0
+offset_right = 624.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 48
+text = "ESCAPANDO DEL 453"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=305515106]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 247.0
+offset_right = 462.0
+offset_bottom = 475.0
+theme_override_constants/separation = 60
+
+[node name="BotonJugar" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=1909930949]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "JUGAR"
+
+[node name="BotonSalir" type="Button" parent="CanvasLayer/Control/VBoxContainer" unique_id=356730473]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "SALIR"

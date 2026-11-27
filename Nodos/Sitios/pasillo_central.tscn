@@ -65,18 +65,18 @@ mesh = SubResource("BoxMesh_uhuhp")
 transform = Transform3D(3.9704883, 0, 0, 0, 1, 0, 0, 0, 0.4176663, -9.241354, 2.6711082, 1.2150974)
 
 [node name="Pared 1" parent="." unique_id=1918301823 instance=ExtResource("5_thrac")]
-transform = Transform3D(-0.007672876, 0, -1.4092206, 0, 1, 0, 0.9711545, 0, -0.011133939, 2.555469, 0.911682, 6.659279)
+transform = Transform3D(-0.007672876, 0, -1.4092206, 0, 1, 0, 0.9711545, 0, -0.011133939, 0.7453613, 0.911682, 6.659279)
 
 [node name="Pared 2" parent="." unique_id=1991483955 instance=ExtResource("5_thrac")]
-transform = Transform3D(-0.007672875, 0, -1.4092205, 0, 1, 0, 0.97115445, 0, -0.011133938, 1.0579004, 0.911682, 6.659279)
+transform = Transform3D(-0.007672875, 0, -1.4092205, 0, 1, 0, 0.97115445, 0, -0.011133938, -0.7522073, 0.911682, 6.659279)
 
 [node name="Puerta 2" parent="." unique_id=1690585863 instance=ExtResource("6_cy8d4")]
-transform = Transform3D(-0.017625893, 0, -0.9998447, 0, 0.9686923, 0, 0.9998447, 0, -0.017625893, -0.76354504, 0.9538357, 6.5722294)
+transform = Transform3D(-0.017625893, 0, -0.9998447, 0, 0.9686923, 0, 0.9998447, 0, -0.017625893, -2.5736527, 0.9538357, 6.5722294)
 script = null
 
 [node name="Puerta 3" parent="." unique_id=1053217031 instance=ExtResource("6_cy8d4")]
-transform = Transform3D(-0.01762589, 0, -0.99984455, 0, 0.9686922, 0, 0.99984455, 0, -0.01762589, -2.9902258, 0.9538357, 6.5722275)
+transform = Transform3D(-0.01762589, 0, -0.99984455, 0, 0.9686922, 0, 0.99984455, 0, -0.01762589, -4.8003335, 0.9538357, 6.5722275)
 script = null
 
 [node name="Pared 3" parent="." unique_id=112812068 instance=ExtResource("5_thrac")]
-transform = Transform3D(-0.007672876, 0, -1.4092206, 0, 1, 0, 0.9711545, 0, -0.011133939, -4.87582, 0.93507624, 6.659279)
+transform = Transform3D(-0.007672876, 0, -1.4092206, 0, 1, 0, 0.9711545, 0, -0.011133939, -6.685928, 0.93507624, 6.659279)

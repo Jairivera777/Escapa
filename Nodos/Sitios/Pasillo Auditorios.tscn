@@ -15,113 +15,122 @@
 
 [node name="Pasillo" type="Node3D" unique_id=110682684]
 
-[node name="Puerta 7" parent="." unique_id=1690585863 instance=ExtResource("1_gy2e5")]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=806956074]
+
+[node name="Puerta 7" parent="NavigationRegion3D" unique_id=1690585863 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 12.03825)
 script = null
 
-[node name="Piso" parent="." unique_id=770946294 instance=ExtResource("2_hvqm2")]
+[node name="Piso" parent="NavigationRegion3D" unique_id=770946294 instance=ExtResource("2_hvqm2")]
 transform = Transform3D(0.9738098, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Puerta 2" parent="." unique_id=2115999157 instance=ExtResource("1_gy2e5")]
+[node name="Puerta 2" parent="NavigationRegion3D" unique_id=2115999157 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(-0.017326485, 0, -0.99984986, 0, 1, 0, 0.99984986, 0, -0.017326485, -0.0058743358, 0.96138763, -4.063985)
 script = null
 
-[node name="Node3D" parent="." unique_id=1918301823 instance=ExtResource("4_casgr")]
+[node name="Node3D" parent="NavigationRegion3D" unique_id=1918301823 instance=ExtResource("4_casgr")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.0210057, 0, 1, 0, -4.371139e-08, -1.6747432, 0.91613424, -4.048066)
 
-[node name="Pared 1" parent="." unique_id=113778299 instance=ExtResource("5_158t0")]
+[node name="Pared 1" parent="NavigationRegion3D" unique_id=113778299 instance=ExtResource("5_158t0")]
 transform = Transform3D(-0.0150270015, 0, -0.9998871, 0, 1.0164499, 0, 0.9998871, 0, -0.0150270015, 1.6313467, 0.9023957, -4.0328436)
 
-[node name="Pared 2" parent="." unique_id=1472385316 instance=ExtResource("6_4pyxf")]
+[node name="Pared 2" parent="NavigationRegion3D" unique_id=1472385316 instance=ExtResource("6_4pyxf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.117809, 0.9116821, -3.5445395)
 
-[node name="Pared 3" parent="." unique_id=305631862 instance=ExtResource("7_32y0e")]
+[node name="Pared 3" parent="NavigationRegion3D" unique_id=305631862 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -2.48566)
 
-[node name="Pared 4" parent="." unique_id=1251321268 instance=ExtResource("7_32y0e")]
+[node name="Pared 4" parent="NavigationRegion3D" unique_id=1251321268 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -1.4244292)
 
-[node name="Pared 5" parent="." unique_id=2304383 instance=ExtResource("7_32y0e")]
+[node name="Pared 5" parent="NavigationRegion3D" unique_id=2304383 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, -0.37973055)
 
-[node name="Puerta 3" parent="." unique_id=1108031796 instance=ExtResource("1_gy2e5")]
+[node name="Puerta 3" parent="NavigationRegion3D" unique_id=1108031796 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.999994, 0, -0.0034594794, 0, 1, 0, 0.0034594794, 0, 0.999994, 2.0902755, 0.9044955, 1.2346411)
 script = null
 
-[node name="Puerta 4" parent="." unique_id=915985498 instance=ExtResource("1_gy2e5")]
+[node name="Puerta 4" parent="NavigationRegion3D" unique_id=915985498 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 3.4232798)
 script = null
 
-[node name="Pared 6" parent="." unique_id=698672220 instance=ExtResource("7_32y0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 5.0860395)
+[node name="Pared 6" parent="NavigationRegion3D" unique_id=698672220 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 2.121787, 0.9116821, 5.0860395)
 
-[node name="Pared 7" parent="." unique_id=137844448 instance=ExtResource("7_32y0e")]
+[node name="Pared 7" parent="NavigationRegion3D" unique_id=137844448 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 6.160053)
 
-[node name="Pared 8" parent="." unique_id=1271879121 instance=ExtResource("7_32y0e")]
+[node name="Pared 8" parent="NavigationRegion3D" unique_id=1271879121 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 7.2260613)
 
-[node name="Pared 9" parent="." unique_id=846492611 instance=ExtResource("7_32y0e")]
+[node name="Pared 9" parent="NavigationRegion3D" unique_id=846492611 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 8.28906)
 
-[node name="Pared 10" parent="." unique_id=1937799553 instance=ExtResource("7_32y0e")]
+[node name="Pared 10" parent="NavigationRegion3D" unique_id=1937799553 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 9.336425)
 
-[node name="Pared 11" parent="." unique_id=239141303 instance=ExtResource("7_32y0e")]
+[node name="Pared 11" parent="NavigationRegion3D" unique_id=239141303 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 10.391606)
 
-[node name="StaticBody3D" parent="." unique_id=901582708 instance=ExtResource("8_ntyis")]
+[node name="StaticBody3D" parent="NavigationRegion3D" unique_id=901582708 instance=ExtResource("8_ntyis")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2361097, 0.9465952, -3.5113342)
 
-[node name="Techo" parent="." unique_id=1934693407 instance=ExtResource("9_u31sw")]
+[node name="Techo" parent="NavigationRegion3D" unique_id=1934693407 instance=ExtResource("9_u31sw")]
 transform = Transform3D(1.1919415, 0, 0, 0, 1, 0, 0, 0, 1.4082879, -0.624815, 2.6602526, 1.5453663)
 
-[node name="Piso2" parent="." unique_id=2060201908 instance=ExtResource("10_itsu8")]
+[node name="Piso2" parent="NavigationRegion3D" unique_id=2060201908 instance=ExtResource("10_itsu8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.1560326, -4.172921, 0, 8.405569)
 
-[node name="Puerta 5" parent="." unique_id=1737578981 instance=ExtResource("11_msb3o")]
+[node name="Puerta 5" parent="NavigationRegion3D" unique_id=1737578981 instance=ExtResource("11_msb3o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3613443, 0.9651073, 1.4426949)
 
-[node name="Puerta 6" parent="." unique_id=785185307 instance=ExtResource("11_msb3o")]
+[node name="Puerta 6" parent="NavigationRegion3D" unique_id=785185307 instance=ExtResource("11_msb3o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3613443, 0.9651073, 3.675024)
 
-[node name="Puerta 8" parent="." unique_id=786267407 instance=ExtResource("1_gy2e5")]
+[node name="Puerta 8" parent="NavigationRegion3D" unique_id=786267407 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 14.274566)
 script = null
 
-[node name="Pared 12" parent="." unique_id=1177138283 instance=ExtResource("7_32y0e")]
+[node name="Pared 12" parent="NavigationRegion3D" unique_id=1177138283 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 15.86824)
 
-[node name="Pared 13" parent="." unique_id=1769006183 instance=ExtResource("7_32y0e")]
+[node name="Pared 13" parent="NavigationRegion3D" unique_id=1769006183 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 16.93683)
 
-[node name="Pared 14" parent="." unique_id=104012847 instance=ExtResource("7_32y0e")]
+[node name="Pared 14" parent="NavigationRegion3D" unique_id=104012847 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 18.005093)
 
-[node name="StaticBody3D2" parent="." unique_id=968060679 instance=ExtResource("12_gkeog")]
+[node name="StaticBody3D2" parent="NavigationRegion3D" unique_id=968060679 instance=ExtResource("12_gkeog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2361097, 1.2676666, 1.4173007)
 
-[node name="Puerta 9" parent="." unique_id=508088400 instance=ExtResource("11_msb3o")]
+[node name="Puerta 9" parent="NavigationRegion3D" unique_id=508088400 instance=ExtResource("11_msb3o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2513487, 0.97694933, 13.079941)
 
-[node name="Puerta 10" parent="." unique_id=1706312943 instance=ExtResource("11_msb3o")]
+[node name="Puerta 10" parent="NavigationRegion3D" unique_id=1706312943 instance=ExtResource("11_msb3o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.202533, 0.9651073, 15.269489)
 
-[node name="StaticBody3D3" parent="." unique_id=467013772 instance=ExtResource("13_1v05h")]
+[node name="StaticBody3D3" parent="NavigationRegion3D" unique_id=467013772 instance=ExtResource("13_1v05h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.226069, 1.0082743, 17.444159)
 
-[node name="Pared 15" parent="." unique_id=869653220 instance=ExtResource("7_32y0e")]
+[node name="Pared 15" parent="NavigationRegion3D" unique_id=869653220 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 19.030142)
 
-[node name="Pared 16" parent="." unique_id=242863064 instance=ExtResource("7_32y0e")]
+[node name="Pared 16" parent="NavigationRegion3D" unique_id=242863064 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 20.119247)
 
-[node name="Puerta 11" parent="." unique_id=487670705 instance=ExtResource("1_gy2e5")]
-transform = Transform3D(-0.9998222, 0, 0.018853946, 0, 1, 0, -0.018853946, 0, -0.9998222, 2.1026926, 0.9146887, 21.689445)
+[node name="Puerta 11" parent="NavigationRegion3D" unique_id=487670705 instance=ExtResource("1_gy2e5")]
+transform = Transform3D(-0.9998222, 0, 0.018853946, 0, 1, 0, -0.018853946, 0, -0.9998222, 2.1026926, 0.9146887, 23.957838)
 script = null
 
-[node name="Pared 17" parent="." unique_id=391049427 instance=ExtResource("7_32y0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 23.33085)
+[node name="Pared 17" parent="NavigationRegion3D" unique_id=391049427 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 27.794989)
 
-[node name="Pared 18" parent="." unique_id=755987848 instance=ExtResource("7_32y0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 24.394756)
+[node name="Puerta 12" parent="NavigationRegion3D" unique_id=620940151 instance=ExtResource("1_gy2e5")]
+transform = Transform3D(-0.9998222, 0, 0.018853946, 0, 1, 0, -0.018853946, 0, -0.9998222, 2.1026926, 0.9146887, 26.11619)
+script = null
+
+[node name="Pared 18" parent="NavigationRegion3D" unique_id=174021058 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 21.236357)
+
+[node name="Pared 16" parent="." unique_id=1489381249 instance=ExtResource("7_32y0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 22.317244)
