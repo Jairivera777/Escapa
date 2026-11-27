@@ -21,6 +21,10 @@ var inventario : Array = [null, null, null, null, null, null, null, null, null]
 @onready var anim_player = $AnimationPlayer 
 @onready var rayCast = $Camera3D/RayCast3D
 @onready var hotbar =$CanvasLayer/hotBar
+
+@onready var luzLinterna = $Camera3D/SpotLight3D
+var tieneLinterna : bool = false
+var linternaEncendida : bool = false
 var tiempo : float = 0
 var puerta : Node3D = null
 func _ready() -> void:
@@ -28,6 +32,7 @@ func _ready() -> void:
 	rayCast.add_exception(self)
 	inventario.resize(tamano)
 	inventario.fill(null)
+	luzLinterna.visible = false
 	if hotbar == null:
 		hotbar = find_child("hotBar", true, false)
 	print("Hotbar encontrada en player: ", hotbar)
@@ -77,12 +82,16 @@ func _physics_process(delta : float):
 	move_and_slide()
 	animate()
 	interactuarObjeto(delta)
+	manejarLinterna()
 func interactuarObjeto(delta : float):
 	rayCast.force_raycast_update()
 	var objeto = null
 	if rayCast.is_colliding():
 		objeto = rayCast.get_collider()
 		if objeto != null:
+			if Input.is_action_just_pressed("Interactuar") and objeto.has_method("recogerLinterna"):
+				objeto.recogerLinterna(self)
+				return
 			var puertaValida = objeto and objeto.is_in_group("puertas") and objeto.has_method("interactuar")
 			if Input.is_action_just_pressed("Interactuar") and objeto.is_in_group("Items") and objeto.has_method("interactuar"):
 				var seGuardo = objeto.interactuar(self)
@@ -104,6 +113,16 @@ func interactuarObjeto(delta : float):
 						puerta.interactuar(false, slotSeleccionado, self)
 					puerta = null
 					tiempo = 0.0
+func manejarLinterna() -> void:
+	if Input.is_action_just_pressed("Linterna") and tieneLinterna:
+		linternaEncendida = !linternaEncendida
+		if luzLinterna:
+			luzLinterna.visible = linternaEncendida
+func obtenerLinterna() -> void:
+	tieneLinterna = true
+	linternaEncendida = false
+	luzLinterna.visible = false
+	mostrarAviso("Recogiste la linterna (Presiona F para encender)")
 func consumirItem() -> void:
 	if hotbar:
 		inventario[hotbar.slotActivo] = null

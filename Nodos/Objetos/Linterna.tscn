@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cqlvsuhkqo38u"]
+
+[ext_resource type="PackedScene" uid="uid://crnl1ie6bkcr0" path="res://Assets/Models/Objects/Linterna.blend" id="1_hjg48"]
+[ext_resource type="Script" uid="uid://1db7j26cnxk2" path="res://scripts/linterna.gd" id="1_v6jio"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jo26l"]
+size = Vector3(1.2822266, 1.1037598, 3.2440186)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1747118228]
+script = ExtResource("1_v6jio")
+
+[node name="Linterna" parent="." unique_id=2080473355 instance=ExtResource("1_hjg48")]
+transform = Transform3D(0.5364187, 0, 0, 0, -0.0023247367, -0.4917869, 0, 0.45392254, -0.0025186564, -0.09177625, 0, 0.18373609)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=198458539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14111328, 0.16959143, -1.3366089)
+shape = SubResource("BoxShape3D_jo26l")
