@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bmyf74egu8k4u" path="res://Nodos/Piso/Puerta/puerta_2.tscn" id="1_gy2e5"]
 [ext_resource type="PackedScene" uid="uid://ck3po8l2xx6vr" path="res://Nodos/Piso/Pisos/piso_piso1.tscn" id="2_hvqm2"]
-[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="3_rghs8"]
 [ext_resource type="PackedScene" uid="uid://cl5isndm000fd" path="res://Nodos/Piso/Paredes/pared1.tscn" id="4_casgr"]
 [ext_resource type="PackedScene" uid="uid://b4h2pgecjagdw" path="res://Nodos/Piso/Paredes/pared2.tscn" id="5_158t0"]
 [ext_resource type="PackedScene" uid="uid://bfhk6m441q5p1" path="res://Nodos/Piso/Paredes/pared3.tscn" id="6_4pyxf"]
@@ -14,30 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://drsdivocwkmxp" path="res://Nodos/Piso/Paredes/Pared Izq 2.tscn" id="12_gkeog"]
 [ext_resource type="PackedScene" uid="uid://blqm2xkbxd6ww" path="res://Nodos/Piso/Paredes/Pared izq 3.tscn" id="13_1v05h"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cp2g5"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_vcn8k"]
-sky_material = SubResource("ProceduralSkyMaterial_cp2g5")
-
-[sub_resource type="Environment" id="Environment_4khac"]
-background_mode = 2
-sky = SubResource("Sky_vcn8k")
-glow_enabled = true
-
 [node name="Pasillo" type="Node3D" unique_id=110682684]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1308023900]
-environment = SubResource("Environment_4khac")
 
 [node name="Puerta 7" parent="." unique_id=1690585863 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 12.03825)
 script = null
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=706133376]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 8.398671, 0)
-shadow_enabled = true
 
 [node name="Piso" parent="." unique_id=770946294 instance=ExtResource("2_hvqm2")]
 transform = Transform3D(0.9738098, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -45,9 +25,6 @@ transform = Transform3D(0.9738098, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 [node name="Puerta 2" parent="." unique_id=2115999157 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(-0.017326485, 0, -0.99984986, 0, 1, 0, 0.99984986, 0, -0.017326485, -0.0058743358, 0.96138763, -4.063985)
 script = null
-
-[node name="Player" parent="." unique_id=975440235 instance=ExtResource("3_rghs8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23119795, 0.20529279, 17.696829)
 
 [node name="Node3D" parent="." unique_id=1918301823 instance=ExtResource("4_casgr")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1.0210057, 0, 1, 0, -4.371139e-08, -1.6747432, 0.91613424, -4.048066)

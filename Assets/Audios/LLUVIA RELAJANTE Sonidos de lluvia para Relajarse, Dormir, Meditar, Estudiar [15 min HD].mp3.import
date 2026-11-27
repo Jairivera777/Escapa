@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1iqjij7mja36"
+path="res://.godot/imported/LLUVIA RELAJANTE Sonidos de lluvia para Relajarse, Dormir, Meditar, Estudiar [15 min HD].mp3-426bdcc4acfc82e958a98f6b0b5d3cec.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audios/LLUVIA RELAJANTE Sonidos de lluvia para Relajarse, Dormir, Meditar, Estudiar [15 min HD].mp3"
+dest_files=["res://.godot/imported/LLUVIA RELAJANTE Sonidos de lluvia para Relajarse, Dormir, Meditar, Estudiar [15 min HD].mp3-426bdcc4acfc82e958a98f6b0b5d3cec.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
