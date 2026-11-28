@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dlp2sv2b4i13y"
+path="res://.godot/imported/Caminar duro.MP3-0fda4cac27b9ebb1ca0206e8c742111f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audios/Caminar duro.MP3"
+dest_files=["res://.godot/imported/Caminar duro.MP3-0fda4cac27b9ebb1ca0206e8c742111f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -38,3 +38,10 @@ func peek_current() -> Node3D:
 
 func is_empty() -> bool:
 	return size == 0
+func clear() -> void:
+	if tail != null:
+		tail.next = null 
+	head = null
+	tail = null
+	current = null
+	size = 0

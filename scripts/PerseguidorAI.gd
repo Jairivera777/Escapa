@@ -4,7 +4,7 @@ extends CharacterBody3D
 @export_category("References")
 @export var nav_agent: NavigationAgent3D
 @export var player: Node3D
-
+@export var anim_player: AnimationPlayer
 @export_category("AI Settings")
 @export var move_speed_patrol: float = 2.0
 @export var move_speed_investigate: float = 3.2
@@ -31,12 +31,14 @@ func _ready() -> void:
 	
 	if not nav_agent:
 		nav_agent = $NavigationAgent3D
-	
+	if not anim_player:
+		anim_player = $AnimationPlayer
 	# Poblar la cola circular con los marcadores asignados en el editor
 	for marker in patrol_markers:
 		if marker != null:
 			patrol_queue.enqueue(marker)
-			
+	await get_tree().physics_frame
+	await get_tree().physics_frame
 	if not patrol_queue.is_empty():
 		_advance_patrol()
 
@@ -85,7 +87,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, move_speed_patrol)
 
 	move_and_slide()
-
+	_update_animations()
 # --- LÓGICA DE ESTADOS ---
 
 func _handle_patrol_state() -> void:
@@ -179,3 +181,19 @@ func _can_see_player() -> bool:
 	var result = space_state.intersect_ray(query)
 	
 	return result and result.collider == player
+func _update_animations() -> void:
+	if not anim_player:
+		return
+	
+	var vel_horizontal = Vector2(velocity.x, velocity.z).length()
+	var target_anim = "Idle"
+	
+	if vel_horizontal > 0.15:
+		if current_state == AIState.PATROL:
+			target_anim = "Walk"
+		else:
+			# Tanto INVESTIGATE como CHASE usan la animación rápida
+			target_anim = "Run"
+	
+	if anim_player.current_animation != target_anim:
+		anim_player.play(target_anim, 0.2)

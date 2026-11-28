@@ -12,10 +12,20 @@
 [ext_resource type="PackedScene" uid="uid://bamih821fg44t" path="res://Nodos/Piso/Puerta/puerta_2_1.tscn" id="11_msb3o"]
 [ext_resource type="PackedScene" uid="uid://drsdivocwkmxp" path="res://Nodos/Piso/Paredes/Pared Izq 2.tscn" id="12_gkeog"]
 [ext_resource type="PackedScene" uid="uid://blqm2xkbxd6ww" path="res://Nodos/Piso/Paredes/Pared izq 3.tscn" id="13_1v05h"]
+[ext_resource type="PackedScene" uid="uid://csjl4d5by1vw8" path="res://Nodos/Personaje/perseguidor.tscn" id="13_gy2e5"]
+[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="14_hvqm2"]
+[ext_resource type="Script" uid="uid://b666r64frrnku" path="res://scripts/PerseguidorAI.gd" id="14_rghs8"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_mclhl"]
+vertices = PackedVector3Array(-2.9146924, 3.1239624, -3.8188972, -2.9146924, 3.1239624, 19.431103, 1.8353076, 3.1239624, 19.431103, 1.8353076, 3.1239624, -3.8188972, -1.6646924, 0.6239624, 4.4311028, -1.6646924, 0.6239624, 6.4311028, 1.3353076, 0.6239624, 6.4311028, 1.3353076, 0.6239624, -3.3188972, -1.4146924, 0.6239624, 0.68110275, -3.4146924, 0.6239624, 0.93110275, -3.6646924, 0.6239624, 4.1811028, -1.4146924, 0.6239624, -3.3188972, -5.6646924, 0.6239624, 16.681103, -3.9146924, 0.6239624, 16.681103, -3.9146924, 0.6239624, 15.931103, -3.9146924, 0.6239624, 0.18110275, -5.6646924, 0.6239624, 0.18110275, -4.1646924, 0.6239624, 4.4311028, -3.4146924, 0.6239624, 15.681103, -3.6646924, 0.6239624, 12.431103, -4.1646924, 0.6239624, 12.181103, -4.1646924, 0.6239624, 11.431103, -4.1646924, 0.6239624, 5.4311028, -3.1646924, 0.6239624, 11.181103, -3.1646924, 0.6239624, 5.6811028, -1.6646924, 0.6239624, 12.181103, -1.4146924, 0.6239624, 15.931103, 1.3353076, 0.6239624, 19.931103, -1.4146924, 0.6239624, 19.931103)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(10, 9, 4), PackedInt32Array(4, 9, 8), PackedInt32Array(8, 11, 7), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 9, 16), PackedInt32Array(16, 9, 10), PackedInt32Array(16, 10, 17), PackedInt32Array(14, 12, 18), PackedInt32Array(18, 12, 19), PackedInt32Array(19, 12, 20), PackedInt32Array(21, 20, 12), PackedInt32Array(16, 17, 22), PackedInt32Array(23, 21, 24), PackedInt32Array(24, 21, 22), PackedInt32Array(21, 12, 22), PackedInt32Array(22, 12, 16), PackedInt32Array(19, 25, 18), PackedInt32Array(18, 25, 26), PackedInt32Array(5, 6, 25), PackedInt32Array(25, 6, 26), PackedInt32Array(26, 6, 27), PackedInt32Array(27, 28, 26)]
 
 [node name="Pasillo" type="Node3D" unique_id=110682684]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=806956074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006, 0)
+navigation_mesh = SubResource("NavigationMesh_mclhl")
+metadata/_edit_group_ = true
 
 [node name="Puerta 7" parent="NavigationRegion3D" unique_id=1690585863 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 12.03825)
@@ -81,12 +91,6 @@ transform = Transform3D(1.1919415, 0, 0, 0, 1, 0, 0, 0, 1.4082879, -0.624815, 2.
 [node name="Piso2" parent="NavigationRegion3D" unique_id=2060201908 instance=ExtResource("10_itsu8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.1560326, -4.172921, 0, 8.405569)
 
-[node name="Puerta 5" parent="NavigationRegion3D" unique_id=1737578981 instance=ExtResource("11_msb3o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3613443, 0.9651073, 1.4426949)
-
-[node name="Puerta 6" parent="NavigationRegion3D" unique_id=785185307 instance=ExtResource("11_msb3o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3613443, 0.9651073, 3.675024)
-
 [node name="Puerta 8" parent="NavigationRegion3D" unique_id=786267407 instance=ExtResource("1_gy2e5")]
 transform = Transform3D(0.99983037, 0, 0.018414982, 0, 1, 0, -0.018414982, 0, 0.99983037, 2.1145525, 0.90924764, 14.274566)
 script = null
@@ -102,12 +106,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 18.0050
 
 [node name="StaticBody3D2" parent="NavigationRegion3D" unique_id=968060679 instance=ExtResource("12_gkeog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2361097, 1.2676666, 1.4173007)
-
-[node name="Puerta 9" parent="NavigationRegion3D" unique_id=508088400 instance=ExtResource("11_msb3o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2513487, 0.97694933, 13.079941)
-
-[node name="Puerta 10" parent="NavigationRegion3D" unique_id=1706312943 instance=ExtResource("11_msb3o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.202533, 0.9651073, 15.269489)
 
 [node name="StaticBody3D3" parent="NavigationRegion3D" unique_id=467013772 instance=ExtResource("13_1v05h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.226069, 1.0082743, 17.444159)
@@ -132,5 +130,43 @@ script = null
 [node name="Pared 18" parent="NavigationRegion3D" unique_id=174021058 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 21.236357)
 
-[node name="Pared 16" parent="." unique_id=1489381249 instance=ExtResource("7_32y0e")]
+[node name="Pared 19" parent="NavigationRegion3D" unique_id=1489381249 instance=ExtResource("7_32y0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1217875, 0.9116821, 22.317244)
+
+[node name="Puerta 10" parent="." unique_id=1706312943 instance=ExtResource("11_msb3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.202533, 0.9651073, 15.269489)
+
+[node name="Puerta 9" parent="." unique_id=508088400 instance=ExtResource("11_msb3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2513487, 0.97694933, 13.079941)
+
+[node name="Puerta 6" parent="." unique_id=785185307 instance=ExtResource("11_msb3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3613443, 0.9651073, 3.675024)
+
+[node name="Puerta 5" parent="." unique_id=1737578981 instance=ExtResource("11_msb3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3613443, 0.9651073, 1.4426949)
+
+[node name="Perseguidor" parent="." unique_id=975440235 node_paths=PackedStringArray("patrol_markers") instance=ExtResource("13_gy2e5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11352085, 0.80190873, 5.194238)
+script = ExtResource("14_rghs8")
+move_speed_patrol = 2.0
+move_speed_investigate = 3.2
+move_speed_chase = 4.6
+rotation_speed = 10.0
+view_distance = 12.0
+view_angle_degrees = 45.0
+patrol_markers = [NodePath("../Marker3D"), NodePath("../Marker3D2"), NodePath("../Marker3D3"), NodePath("../Marker3D4")]
+
+[node name="Player" parent="." unique_id=545342444 instance=ExtResource("14_hvqm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16049123, 0.50037074, 0.876492)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1196121890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30120683, -1.588917)
+
+[node name="Marker3D2" type="Marker3D" parent="." unique_id=2101039701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27614486, -2.6693935)
+
+[node name="Marker3D3" type="Marker3D" parent="." unique_id=598235286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4719692, 0.24390781, -2.6693935)
+
+[node name="Marker3D4" type="Marker3D" parent="." unique_id=1823999291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4719692, 0.2648089, 0.58787274)
