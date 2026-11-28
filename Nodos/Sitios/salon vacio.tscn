@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://dkdlr5calwnrm"]
+
+[ext_resource type="PackedScene" uid="uid://c5sdbml81feg3" path="res://Nodos/Piso/Paredes/pared_escalera.tscn" id="1_voycx"]
+[ext_resource type="PackedScene" uid="uid://3w76sehb57ej" path="res://Nodos/Piso/Pisos/piso.tscn" id="2_dr6vd"]
+[ext_resource type="PackedScene" uid="uid://cr2ersq7g6q6f" path="res://Nodos/Personaje/player.tscn" id="3_7n22r"]
+[ext_resource type="PackedScene" uid="uid://cbjkny0cotbte" path="res://Nodos/Piso/Paredes/pared con puerta.tscn" id="4_iltof"]
+[ext_resource type="PackedScene" uid="uid://ln8v0aynpjwb" path="res://Nodos/Objetos/tablero.tscn" id="5_7n22r"]
+[ext_resource type="PackedScene" uid="uid://cvng2xtjowp8m" path="res://Nodos/Piso/Paredes/pared_larga_salon.tscn" id="6_7n22r"]
+[ext_resource type="PackedScene" uid="uid://cl5isndm000fd" path="res://Nodos/Piso/Paredes/pared1.tscn" id="7_iltof"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vebak"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u5f8g"]
+size = Vector3(3.8857117, 2.5231934, 0.1706543)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_88x08"]
+size = Vector3(3.8841553, 2.5429688, 0.2833252)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nplsc"]
+size = Vector3(3.8841553, 2.5429688, 0.2833252)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0kt4d"]
+size = Vector3(2.4639587, 2.5429688, 0.2833252)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ywkpf"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_klida"]
+size = Vector3(2.607788, 0.8486023, 0.1706543)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tvuyp"]
+size = Vector3(16.569313, 2.5429688, 0.2833252)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwamv"]
+albedo_color = Color(0.6, 0.45882353, 0.25882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vebak"]
+material = SubResource("StandardMaterial3D_jwamv")
+size = Vector3(0.14147949, 1.6608047, 0.41596603)
+
+[node name="Node3D" type="Node3D" unique_id=1160849533]
+
+[node name="Pared escalera" parent="." unique_id=772881896 instance=ExtResource("1_voycx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37004137, 1.1920929e-07, 1.590516)
+visible = false
+
+[node name="MeshInstance3D" parent="Pared escalera" index="0" unique_id=1973854056]
+visible = false
+
+[node name="CollisionShape3D" parent="Pared escalera" index="1" unique_id=1835045710]
+visible = false
+disabled = true
+
+[node name="MeshInstance3D2" parent="Pared escalera" index="2" unique_id=442111905]
+visible = false
+
+[node name="CollisionShape3D2" parent="Pared escalera" index="3" unique_id=805698399]
+visible = false
+
+[node name="StaticBody3D2" parent="." unique_id=584864912 instance=ExtResource("2_dr6vd")]
+transform = Transform3D(0.7, 0, 0, 0, 2, 0, 0, 0, 2, -1.3334732, -1.1625072, -8.041504)
+
+[node name="Player" parent="." unique_id=975440235 instance=ExtResource("3_7n22r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.31494, 0.10887733, -8.916463)
+
+[node name="StaticBody3D4" parent="." unique_id=1846294248 instance=ExtResource("2_dr6vd")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.740441, -1.1625072, -8.033146)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1876151646]
+transform = Transform3D(-1.15835185e-07, 0, 1, 0, 1, 0, -2.65, 0, -4.371139e-08, -15.866438, 1.1161375, -8.0731945)
+material_override = SubResource("StandardMaterial3D_vebak")
+mesh = SubResource("BoxMesh_u5f8g")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=802168753]
+transform = Transform3D(-1.15835185e-07, 0, 1, 0, 1, 0, -2.65, 0, -4.371139e-08, -15.863512, 1.1160316, -8.06213)
+shape = SubResource("BoxShape3D_88x08")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=62118170]
+transform = Transform3D(-1.15835185e-07, 0, 1, 0, 1, 0, -2.65, 0, -4.371139e-08, 0.7561352, 1.1161375, -8.042585)
+material_override = SubResource("StandardMaterial3D_vebak")
+mesh = SubResource("BoxMesh_u5f8g")
+
+[node name="StaticBody3D3" parent="." unique_id=901582708 instance=ExtResource("4_iltof")]
+transform = Transform3D(-4.502273e-08, 0, -1.03, 0, 1.03, 0, 1.03, 0, -4.502273e-08, -13.7954645, 0.70880306, -2.992052)
+
+[node name="Node3D" parent="." unique_id=1098275867 instance=ExtResource("5_7n22r")]
+transform = Transform3D(-1, 0, -2.6226832e-07, 0, 2, 0, 8.742278e-08, 0, -3, -14.295506, 1.035812, -10.405637)
+
+[node name="Node3D2" parent="." unique_id=2026629456 instance=ExtResource("5_7n22r")]
+transform = Transform3D(-1, 0, -2.6226832e-07, 0, 2, 0, 8.742278e-08, 0, -3, -14.295506, 1.035812, -6.1892195)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=39045280]
+transform = Transform3D(-1.15835185e-07, 0, 1, 0, 1, 0, -2.65, 0, -4.371139e-08, 0.7455056, 1.1160316, -8.06213)
+shape = SubResource("BoxShape3D_nplsc")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=971308179]
+transform = Transform3D(5.65, 0, 0, 0, 1, 0, 0, 0, 1, -6.097807, 1.0826268, -2.979209)
+shape = SubResource("BoxShape3D_0kt4d")
+
+[node name="MeshInstance3D5" parent="." unique_id=2055236731 instance=ExtResource("6_7n22r")]
+transform = Transform3D(6.4, 0, 0, 0, 1, 0, 0, 0, 1, -6.116883, 1.1160161, -2.967669)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=110890018]
+transform = Transform3D(6.4, 0, 0, 0, 1, 0, 0, 0, 1, -7.5036016, 0.27872062, -13.107496)
+material_override = SubResource("StandardMaterial3D_ywkpf")
+mesh = SubResource("BoxMesh_klida")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1028905976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4189777, 1.1159103, -13.096433)
+shape = SubResource("BoxShape3D_tvuyp")
+
+[node name="Pared 1" parent="." unique_id=1918301823 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, 0.15512037, 1.2426913, -13.116057)
+
+[node name="Pared 2" parent="." unique_id=1333229994 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -0.91740984, 1.2426913, -13.116057)
+
+[node name="Pared 3" parent="." unique_id=824366802 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -1.9872015, 1.2426913, -13.116057)
+
+[node name="Pared 4" parent="." unique_id=366179245 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -3.0597317, 1.2426913, -13.116057)
+
+[node name="Pared 5" parent="." unique_id=1703233193 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -4.1299872, 1.2426913, -13.116057)
+
+[node name="Pared 6" parent="." unique_id=557307550 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -5.2025175, 1.2426913, -13.116057)
+
+[node name="Pared 7" parent="." unique_id=1771984614 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -6.2723093, 1.2426913, -13.116057)
+
+[node name="Pared 8" parent="." unique_id=1412052705 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -7.344839, 1.2426913, -13.116057)
+
+[node name="Pared 10" parent="." unique_id=917421809 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -8.407244, 1.2426913, -13.116057)
+
+[node name="Pared 11" parent="." unique_id=768672820 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -9.4770355, 1.2426913, -13.116057)
+
+[node name="Pared 12" parent="." unique_id=127983108 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -10.549565, 1.2426913, -13.116057)
+
+[node name="Pared 13" parent="." unique_id=732249592 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -11.619822, 1.2426913, -13.116057)
+
+[node name="Pared 14" parent="." unique_id=1692045487 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -12.692351, 1.2426913, -13.116057)
+
+[node name="Pared 15" parent="." unique_id=1988720185 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -13.762143, 1.2426913, -13.116057)
+
+[node name="Pared 16" parent="." unique_id=917388677 instance=ExtResource("7_iltof")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.7, 0, -1, 0, -4.371139e-08, -14.834673, 1.2426913, -13.116057)
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=2026538596]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1.00993, 0, -1, 0, -4.371139e-08, -15.572201, 1.5362692, -13.111285)
+mesh = SubResource("BoxMesh_vebak")
+
+[editable path="Pared escalera"]
